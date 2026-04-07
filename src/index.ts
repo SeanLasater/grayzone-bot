@@ -1,5 +1,5 @@
 import { GZ_LOOT_COMMAND } from "./discord/command";
-import { InteractionResponseType, InteractionType, MessageFlags, type DiscordInteraction } from "./discord/types";
+import { InteractionResponseType, InteractionType, type DiscordInteraction } from "./discord/types";
 import { verifyDiscordRequest } from "./discord/verify";
 import { getLootItemByName, searchLootItems } from "./data/loot";
 
@@ -35,16 +35,7 @@ export default {
     }
 
     if (interaction.data?.name !== GZ_LOOT_COMMAND.name) {
-      return Response.json(
-        {
-          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: {
-            content: "Unknown command.",
-            flags: MessageFlags.EPHEMERAL,
-          },
-        },
-        { status: 200 },
-      );
+      return new Response(null, { status: 204 });
     }
 
     if (interaction.type === InteractionType.APPLICATION_COMMAND_AUTOCOMPLETE) {
@@ -66,28 +57,13 @@ export default {
       const userId = getInteractionUserId(interaction);
 
       if (!userId) {
-        return Response.json({
-          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: {
-            content: "I could not determine your Discord user ID for DM delivery.",
-            flags: MessageFlags.EPHEMERAL,
-          },
-        });
+        return new Response(null, { status: 204 });
       }
 
       if (!lootItem) {
         const notFoundMessage = "I could not find that loot item. Try using autocomplete from the command option.";
-        const dmResult = await sendDirectMessage(userId, notFoundMessage, env.DISCORD_BOT_TOKEN);
-
-        return Response.json({
-          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: {
-            content: dmResult.ok
-              ? "I sent you a DM with the lookup result."
-              : "I could not send you a DM. Please check your privacy settings and allow DMs from this bot.",
-            flags: MessageFlags.EPHEMERAL,
-          },
-        });
+        await sendDirectMessage(userId, notFoundMessage, env.DISCORD_BOT_TOKEN);
+        return new Response(null, { status: 204 });
       }
 
       const dmMessage = [
@@ -97,17 +73,8 @@ export default {
         `Sell Price: ${formatPrice(lootItem.sellPrice)}`,
       ].join("\n");
 
-      const dmResult = await sendDirectMessage(userId, dmMessage, env.DISCORD_BOT_TOKEN);
-
-      return Response.json({
-        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-        data: {
-          content: dmResult.ok
-            ? "I sent you a DM with that loot item."
-            : "I could not send you a DM. Please check your privacy settings and allow DMs from this bot.",
-          flags: MessageFlags.EPHEMERAL,
-        },
-      });
+      await sendDirectMessage(userId, dmMessage, env.DISCORD_BOT_TOKEN);
+      return new Response(null, { status: 204 });
     }
 
     return Response.json({ error: "Unhandled interaction type" }, { status: 400 });

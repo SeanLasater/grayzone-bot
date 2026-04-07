@@ -62,4 +62,4 @@ Set your Discord Interactions Endpoint URL to your worker URL, for example:
 - Local tunnel/dev URL while testing
 - `https://grayzone-bot.<your-subdomain>.workers.dev` in production
 
-The bot verifies every incoming interaction with `DISCORD_PUBLIC_KEY`, sends `/gz-loot` results via DM, and uses an ephemeral acknowledgement in the channel.
+The bot verifies every incoming interaction with `DISCORD_PUBLIC_KEY` and sends `/gz-loot` results via DM only.
