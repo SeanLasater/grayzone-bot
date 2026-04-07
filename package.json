@@ -1,0 +1,19 @@
+{
+  "name": "grayzone-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "normalize": "node scripts/normalize-loot.mjs",
+    "register:commands": "node scripts/register-commands.mjs"
+  },
+  "dependencies": {
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "wrangler": "^4.10.0"
+  }
+}

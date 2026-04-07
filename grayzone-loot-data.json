@@ -1,0 +1,842 @@
+[
+  {
+    "name": "Allanach Single Malt Scotch - 40y",
+    "size": "1x2",
+    "weight": "1.000 kg",
+    "sell_price": 5500,
+    "category": "Vices"
+  },
+  {
+    "name": "Breda Rum - 30y",
+    "size": "1x2",
+    "weight": "1.700 kg",
+    "sell_price": 3800,
+    "category": "Vices"
+  },
+  {
+    "name": "Goodlad Whiskey - 20y",
+    "size": "1x2",
+    "weight": "1.600 kg",
+    "sell_price": 450,
+    "category": "Vices"
+  },
+  {
+    "name": "Moutai - 50y",
+    "size": "1x2",
+    "weight": "1.000 kg",
+    "sell_price": 5000,
+    "category": "Vices"
+  },
+  {
+    "name": "Tzintzimitl Tequila - 25y",
+    "size": "1x2",
+    "weight": "1.800 kg",
+    "sell_price": 2000,
+    "category": "Vices"
+  },
+  {
+    "name": "Snake Wine",
+    "size": "1x2",
+    "weight": "1.400 kg",
+    "sell_price": 399,
+    "category": "Vices"
+  },
+  {
+    "name": "Delicate Perfume Bottle",
+    "size": "1x1",
+    "weight": "0.300 kg",
+    "sell_price": 150,
+    "category": "Vices"
+  },
+  {
+    "name": "Fragrant Perfume Bottle",
+    "size": "1x2",
+    "weight": "0.250 kg",
+    "sell_price": 75,
+    "category": "Vices"
+  },
+  {
+    "name": "Heavenly Perfume Bottle",
+    "size": "1x2",
+    "weight": "??? kg",
+    "sell_price": 335,
+    "category": "Vices"
+  },
+  {
+    "name": "Hyperborea Cigarettes",
+    "size": "1x1",
+    "weight": "0.020 kg",
+    "sell_price": 139,
+    "category": "Vices"
+  },
+  {
+    "name": "Lambert Cigars",
+    "size": "1x2",
+    "weight": "0.600 kg",
+    "sell_price": 282,
+    "category": "Vices"
+  },
+  {
+    "name": "Dark Pearl Necklace",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 1350,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Diamond Earrings",
+    "size": "1x1",
+    "weight": "0.020kg",
+    "sell_price": 5700,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Diamond Ring",
+    "size": "1x1",
+    "weight": "0.010kg",
+    "sell_price": 7700,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Diamond-Coral Ring",
+    "size": "1x1",
+    "weight": "0.020kg",
+    "sell_price": 5250,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Elaborate Ring",
+    "size": "1x1",
+    "weight": "0.020kg",
+    "sell_price": 4400,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Emerald Necklace",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 5300,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Gemstone Ring",
+    "size": "1x1",
+    "weight": "0.010kg",
+    "sell_price": 820,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Gold Necklace",
+    "size": "1x1",
+    "weight": "0.020kg",
+    "sell_price": 180,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Gold Ring",
+    "size": "1x1",
+    "weight": "0.020kg",
+    "sell_price": 150,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Luxury Smartwatch",
+    "size": "1x1",
+    "weight": "0.150kg",
+    "sell_price": 600,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Majestic Titanium Watch",
+    "size": "1x1",
+    "weight": "0.100kg",
+    "sell_price": 8000,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Modern Watch",
+    "size": "1x1",
+    "weight": "0.120kg",
+    "sell_price": 150,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Perfect Pearl Earrings",
+    "size": "1x1",
+    "weight": "0.010kg",
+    "sell_price": 5000,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Platinum Ring",
+    "size": "1x1",
+    "weight": "0.010kg",
+    "sell_price": 10000,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Sapphire Pendant",
+    "size": "1x1",
+    "weight": "0.010kg",
+    "sell_price": 3600,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Sleek Luxury Watch",
+    "size": "1x1",
+    "weight": "0.130kg",
+    "sell_price": 1700,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Master Carbon SEAL Automatic Watch",
+    "size": "1x1",
+    "weight": "0.170kg",
+    "sell_price": 1450,
+    "category": "Jewellery"
+  },
+  {
+    "name": "Black Luxury Phone",
+    "size": "1x1",
+    "weight": "0.100kg",
+    "sell_price": 1500,
+    "category": "Electronics"
+  },
+  {
+    "name": "Encrypted Hard Disk Drive",
+    "size": "1x1",
+    "weight": "0.200kg",
+    "sell_price": 1200,
+    "category": "Electronics"
+  },
+  {
+    "name": "Expensive Smartphone",
+    "size": "1x1",
+    "weight": "0.100kg",
+    "sell_price": 350,
+    "category": "Electronics"
+  },
+  {
+    "name": "Luxury Smartphone",
+    "size": "1x1",
+    "weight": "0.100kg",
+    "sell_price": 1000,
+    "category": "Electronics"
+  },
+  {
+    "name": "Smartphone",
+    "size": "1x1",
+    "weight": "0.100kg",
+    "sell_price": 250,
+    "category": "Electronics"
+  },
+  {
+    "name": "Common Credit Card",
+    "size": "1x1",
+    "weight": "0.005kg",
+    "sell_price": 600,
+    "category": "Funds"
+  },
+  {
+    "name": "Gold Credit Card",
+    "size": "1x1",
+    "weight": "0.005kg",
+    "sell_price": 2200,
+    "category": "Funds"
+  },
+  {
+    "name": "Platinum Credit Card",
+    "size": "1x1",
+    "weight": "0.005kg",
+    "sell_price": 6000,
+    "category": "Funds"
+  },
+  {
+    "name": "Black Credit Card",
+    "size": "1x1",
+    "weight": "0.010kg",
+    "sell_price": 15000,
+    "category": "Funds"
+  },
+  {
+    "name": "Businessman ID Card",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 937,
+    "category": "Evidence"
+  },
+  {
+    "name": "Local ID Card",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 187,
+    "category": "Evidence"
+  },
+  {
+    "name": "Driver's License",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 262,
+    "category": "Evidence"
+  },
+  {
+    "name": "Tourist ID Card",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 112,
+    "category": "Evidence"
+  },
+  {
+    "name": "Tourist Passport",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 2625,
+    "category": "Evidence"
+  },
+  {
+    "name": "VIP Passport",
+    "size": "1x1",
+    "weight": "0.050kg",
+    "sell_price": 6800,
+    "category": "Evidence"
+  },
+  {
+    "name": "Army Intel",
+    "size": "1x2",
+    "weight": "0.100kg",
+    "sell_price": 1280,
+    "category": "Evidence"
+  },
+  {
+    "name": "Digital Camera",
+    "size": "1x1",
+    "weight": "0.250kg",
+    "sell_price": 112,
+    "category": "Evidence"
+  },
+  {
+    "name": "Laptop",
+    "size": "2x2",
+    "weight": "1.500kg",
+    "sell_price": 750,
+    "category": "Evidence"
+  },
+  {
+    "name": "Reflex Camera",
+    "size": "2x1",
+    "weight": "0.400kg",
+    "sell_price": 960,
+    "category": "Evidence"
+  },
+  {
+    "name": "Reinforced Military Laptop",
+    "size": "2x2",
+    "weight": "2.500kg",
+    "sell_price": 2300,
+    "category": "Evidence"
+  },
+  {
+    "name": "AN/PYQ-10",
+    "size": "1x2",
+    "weight": "0.970kg",
+    "sell_price": 3150,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "AZART P1 Radio",
+    "size": "1x2",
+    "weight": "0.720kg",
+    "sell_price": 825,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "Biometric Access Card",
+    "size": "1x1",
+    "weight": "0.008kg",
+    "sell_price": 2000,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "Biometric Thumb Drive",
+    "size": "1x1",
+    "weight": "0.004kg",
+    "sell_price": 1875,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "C2 Military Laptop",
+    "size": "2x2",
+    "weight": "5.000kg",
+    "sell_price": 4900,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "Handheld ECM Jammer",
+    "size": "1x2",
+    "weight": "2.000kg",
+    "sell_price": 712,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "HGCS-30 UAV Control Station",
+    "size": "2x2",
+    "weight": "3.000kg",
+    "sell_price": 2000,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "KIK-11 Tactical Key Loader",
+    "size": "1x1",
+    "weight": "0.450kg",
+    "sell_price": 2900,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "LTSD-4-3 Laser Designator",
+    "size": "3x3",
+    "weight": "14.000kg",
+    "sell_price": 60000,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "NPI-2 Navigation Receiver",
+    "size": "1x1",
+    "weight": "0.300kg",
+    "sell_price": 1100,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "One-Time Pad Key Sheets",
+    "size": "1x1",
+    "weight": "0.100kg",
+    "sell_price": 2400,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "Operation Data Encrypted Hard Disk",
+    "size": "1x1",
+    "weight": "???kg",
+    "sell_price": "????",
+    "category": "Military Equipment"
+  },
+  {
+    "name": "PBG-01+ UAV Control Station",
+    "size": "2x2",
+    "weight": "14.200kg",
+    "sell_price": 6400,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "Rugged Military Tablet",
+    "size": "2x2",
+    "weight": "2.000kg",
+    "sell_price": 1200,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "Signal Repeater RT97S",
+    "size": "3x2",
+    "weight": "1.660kg",
+    "sell_price": 675,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "STRELETS-M Tablet",
+    "size": "1x1",
+    "weight": "???kg",
+    "sell_price": 4700,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "GLONASS Grot-M Navigation Receiver",
+    "size": "1x2",
+    "weight": "0.800kg",
+    "sell_price": 937,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "R-438 Barrier-T",
+    "size": "2x2",
+    "weight": "16.000kg",
+    "sell_price": 45000,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "ATM Hacking Tool",
+    "size": "1x1",
+    "weight": "0.150kg",
+    "sell_price": 5000,
+    "category": "Military Equipment"
+  },
+  {
+    "name": "Camouflage Fabric",
+    "size": "2x1",
+    "weight": "0.480kg",
+    "sell_price": 10,
+    "category": "Military Material"
+  },
+  {
+    "name": "Low-Grade Gunpowder",
+    "size": "1x2",
+    "weight": "0.450kg",
+    "sell_price": 23,
+    "category": "Military Material"
+  },
+  {
+    "name": "Paracord",
+    "size": "2x1",
+    "weight": "0.100kg",
+    "sell_price": 9,
+    "category": "Military Material"
+  },
+  {
+    "name": "Weapon Oil",
+    "size": "1x2",
+    "weight": "0.272kg",
+    "sell_price": 9,
+    "category": "Military Material"
+  },
+  {
+    "name": "Aramid Cloth",
+    "size": "2x1",
+    "weight": "0.061kg",
+    "sell_price": 42,
+    "category": "Military Material"
+  },
+  {
+    "name": "Acetylene Cylinder",
+    "size": "1x1",
+    "weight": "????kg",
+    "sell_price": "????",
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Drain Cleaner",
+    "size": "1x2",
+    "weight": "5.000kg",
+    "sell_price": 15,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Industrial Solvent",
+    "size": "2x2",
+    "weight": "3.800kg",
+    "sell_price": 29,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Sulfuric Acid",
+    "size": "2x2",
+    "weight": "5.030kg",
+    "sell_price": 99,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Thermal Blanket",
+    "size": "1x1",
+    "weight": "0.057kg",
+    "sell_price": 1,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "UN Medical Tools",
+    "size": "2x1",
+    "weight": "0.500kg",
+    "sell_price": 15,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Vial of Antigens",
+    "size": "1x1",
+    "weight": "0.030kg",
+    "sell_price": 947,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Water Purification Tablets",
+    "size": "1x1",
+    "weight": "0.125kg",
+    "sell_price": 27,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Disinfectant",
+    "size": "1x1",
+    "weight": "1.000kg",
+    "sell_price": 199,
+    "category": "Laboratory Supplies"
+  },
+  {
+    "name": "Brake Fluid",
+    "size": "2x2",
+    "weight": "3.800 kg",
+    "sell_price": 21,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Broken Angle Grinder",
+    "size": "2x2",
+    "weight": "2.499 kg",
+    "sell_price": 56,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Broken Carpentry Hammer",
+    "size": "1x2",
+    "weight": "0.312 kg",
+    "sell_price": 6,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Broken Handsaw",
+    "size": "2x2",
+    "weight": "0.680 kg",
+    "sell_price": 24,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Broken Jigsaw",
+    "size": "2x2",
+    "weight": "2.000 kg",
+    "sell_price": 55,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Broken Nailgun",
+    "size": "2x2",
+    "weight": "2.500 kg",
+    "sell_price": 75,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Broken Screwdriver",
+    "size": "1x1",
+    "weight": "0.120 kg",
+    "sell_price": 6,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Fuel Canister",
+    "size": "2x2",
+    "weight": "5.000 kg",
+    "sell_price": 21,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Jumper Cables",
+    "size": "2x2",
+    "weight": "2.340 kg",
+    "sell_price": 30,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Motor Oil",
+    "size": "2x2",
+    "weight": "4.300 kg",
+    "sell_price": 15,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Multitool",
+    "size": "1x1",
+    "weight": "0.120 kg",
+    "sell_price": 54,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Rubber Renue",
+    "size": "1x2",
+    "weight": "1.000 kg",
+    "sell_price": 51,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Toolset",
+    "size": "2x2",
+    "weight": "1.000 kg",
+    "sell_price": 142,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "White Lithium Grease",
+    "size": "2x3",
+    "weight": "15.880 kg",
+    "sell_price": 150,
+    "category": "Workshop Supplies"
+  },
+  {
+    "name": "Bleach",
+    "size": "1x1",
+    "weight": "3.570 kg",
+    "sell_price": 19,
+    "category": "Household Item"
+  },
+  {
+    "name": "Carton of Tahirs Cigarettes",
+    "size": "3x1",
+    "weight": "0.250 kg",
+    "sell_price": 27,
+    "category": "Household Item"
+  },
+  {
+    "name": "Deck of Cards",
+    "size": "1x1",
+    "weight": "0.088 kg",
+    "sell_price": 3,
+    "category": "Household Item"
+  },
+  {
+    "name": "Disinfectant",
+    "size": "1x1",
+    "weight": "1.000 kg",
+    "sell_price": 199,
+    "category": "Household Item"
+  },
+  {
+    "name": "Fishing Line",
+    "size": "1x1",
+    "weight": "0.130 kg",
+    "sell_price": 3,
+    "category": "Household Item"
+  },
+  {
+    "name": "Hand Mirror",
+    "size": "1x2",
+    "weight": "0.400 kg",
+    "sell_price": 9,
+    "category": "Household Item"
+  },
+  {
+    "name": "Insect Repellant Spray",
+    "size": "1x1",
+    "weight": "0.258 kg",
+    "sell_price": 6,
+    "category": "Household Item"
+  },
+  {
+    "name": "Lamp Oil",
+    "size": "1x2",
+    "weight": "1.000 kg",
+    "sell_price": 3,
+    "category": "Household Item"
+  },
+  {
+    "name": "Lighter",
+    "size": "1x1",
+    "weight": "0.040 kg",
+    "sell_price": 1,
+    "category": "Household Item"
+  },
+  {
+    "name": "Motorbike Battery",
+    "size": "2x1",
+    "weight": "2.000 kg",
+    "sell_price": 36,
+    "category": "Household Item"
+  },
+  {
+    "name": "Naosaoad 100% Clean",
+    "size": "1x2",
+    "weight": "0.500 kg",
+    "sell_price": 18,
+    "category": "Household Item"
+  },
+  {
+    "name": "Pack of AA Batteries",
+    "size": "1x1",
+    "weight": "0.024 kg",
+    "sell_price": 7,
+    "category": "Household Item"
+  },
+  {
+    "name": "Pack of Premium Coffee",
+    "size": "1x2",
+    "weight": "0.600 kg",
+    "sell_price": 27,
+    "category": "Household Item"
+  },
+  {
+    "name": "Petrolatum",
+    "size": "1x1",
+    "weight": "0.370 kg",
+    "sell_price": 9,
+    "category": "Household Item"
+  },
+  {
+    "name": "Phone Charger",
+    "size": "1x1",
+    "weight": "0.075 kg",
+    "sell_price": 9,
+    "category": "Household Item"
+  },
+  {
+    "name": "Propane Bottle",
+    "size": "1x2",
+    "weight": "0.453 kg",
+    "sell_price": 31,
+    "category": "Household Item"
+  },
+  {
+    "name": "Refillable Lighter",
+    "size": "1x1",
+    "weight": "0.080 kg",
+    "sell_price": 37,
+    "category": "Household Item"
+  },
+  {
+    "name": "Sewing Set",
+    "size": "1x1",
+    "weight": "0.146 kg",
+    "sell_price": 1,
+    "category": "Household Item"
+  },
+  {
+    "name": "Tahirs Cigarettes",
+    "size": "1x1",
+    "weight": "0.013 kg",
+    "sell_price": 5,
+    "category": "Household Item"
+  },
+  {
+    "name": "Car Battery",
+    "size": "2x2",
+    "weight": "12.660 kg",
+    "sell_price": 56,
+    "category": "Tech"
+  },
+  {
+    "name": "Pro Multitool",
+    "size": "1x1",
+    "weight": "0.120 kg",
+    "sell_price": null,
+    "category": "Tool"
+  },
+  {
+    "name": "Camera Wiretap",
+    "size": "1x1",
+    "weight": "0.010 kg",
+    "sell_price": null,
+    "category": "Tool"
+  },
+  {
+    "name": "GPS Tracker",
+    "size": "1x1",
+    "weight": "0.050 kg",
+    "sell_price": null,
+    "category": "Tool"
+  },
+  {
+    "name": "Sample Collection Kit",
+    "size": "1x1",
+    "weight": "0.100 kg",
+    "sell_price": null,
+    "category": "Tool"
+  },
+  {
+    "name": "Box of Supplies",
+    "size": "2x2",
+    "weight": "2.000 kg",
+    "sell_price": null,
+    "category": "Tool"
+  }
+]
