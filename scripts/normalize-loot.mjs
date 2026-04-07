@@ -11,25 +11,27 @@ if (!Array.isArray(parsed)) {
   throw new Error("grayzone-loot-data.json must be an array");
 }
 
-const normalized = parsed.map((item) => ({
-  id: slugify(String(item.name ?? "")),
-  name: String(item.name ?? "Unknown").trim(),
-  size: String(item.size ?? "Unknown").trim() || "Unknown",
-  weight: String(item.weight ?? "Unknown").trim() || "Unknown",
-  sellPrice: parseSellPrice(item.sell_price),
-  category: item.category ? String(item.category).trim() : null,
-}));
+const idCounts = new Map();
+const normalized = parsed.map((item) => {
+  const name = String(item.name ?? "Unknown").trim();
+  const baseId = slugify(name);
+  const nextCount = (idCounts.get(baseId) ?? 0) + 1;
+  idCounts.set(baseId, nextCount);
 
-const ids = new Set();
+  return {
+    id: nextCount === 1 ? baseId : `${baseId}-${nextCount}`,
+    name,
+    size: String(item.size ?? "Unknown").trim() || "Unknown",
+    weight: String(item.weight ?? "Unknown").trim() || "Unknown",
+    sellPrice: parseSellPrice(item.sell_price),
+    category: item.category ? String(item.category).trim() : null,
+  };
+});
+
 for (const item of normalized) {
   if (!item.name || item.name === "Unknown") {
     throw new Error("Found loot item with missing name");
   }
-
-  if (ids.has(item.id)) {
-    throw new Error(`Duplicate loot id generated: ${item.id}`);
-  }
-  ids.add(item.id);
 }
 
 await writeFile(outputPath, `${JSON.stringify(normalized, null, 2)}\n`, "utf8");
