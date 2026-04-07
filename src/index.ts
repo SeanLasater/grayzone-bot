@@ -5,6 +5,7 @@ import { getLootItemByName, searchLootItems } from "./data/loot";
 
 type Env = {
   DISCORD_PUBLIC_KEY: string;
+  DISCORD_BOT_TOKEN: string;
 };
 
 export default {
@@ -62,26 +63,48 @@ export default {
     if (interaction.type === InteractionType.APPLICATION_COMMAND) {
       const lootable = getOptionValue(interaction, "lootable");
       const lootItem = lootable ? getLootItemByName(lootable) : null;
+      const userId = getInteractionUserId(interaction);
 
-      if (!lootItem) {
+      if (!userId) {
         return Response.json({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: {
-            content: "I could not find that loot item. Try using autocomplete from the command option.",
+            content: "I could not determine your Discord user ID for DM delivery.",
             flags: MessageFlags.EPHEMERAL,
           },
         });
       }
 
+      if (!lootItem) {
+        const notFoundMessage = "I could not find that loot item. Try using autocomplete from the command option.";
+        const dmResult = await sendDirectMessage(userId, notFoundMessage, env.DISCORD_BOT_TOKEN);
+
+        return Response.json({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+          data: {
+            content: dmResult.ok
+              ? "I sent you a DM with the lookup result."
+              : "I could not send you a DM. Please check your privacy settings and allow DMs from this bot.",
+            flags: MessageFlags.EPHEMERAL,
+          },
+        });
+      }
+
+      const dmMessage = [
+        `**${lootItem.name}**`,
+        `Size: ${lootItem.size}`,
+        `Weight: ${lootItem.weight}`,
+        `Sell Price: ${formatPrice(lootItem.sellPrice)}`,
+      ].join("\n");
+
+      const dmResult = await sendDirectMessage(userId, dmMessage, env.DISCORD_BOT_TOKEN);
+
       return Response.json({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content: [
-            `**${lootItem.name}**`,
-            `Size: ${lootItem.size}`,
-            `Weight: ${lootItem.weight}`,
-            `Sell Price: ${formatPrice(lootItem.sellPrice)}`,
-          ].join("\n"),
+          content: dmResult.ok
+            ? "I sent you a DM with that loot item."
+            : "I could not send you a DM. Please check your privacy settings and allow DMs from this bot.",
           flags: MessageFlags.EPHEMERAL,
         },
       });
@@ -103,4 +126,56 @@ function getOptionValue(interaction: DiscordInteraction, optionName: string): st
 
 function formatPrice(price: number | null): string {
   return price === null ? "Unknown" : `$${price.toLocaleString("en-US")}`;
+}
+
+function getInteractionUserId(interaction: DiscordInteraction): string | null {
+  const id = interaction.member?.user?.id ?? interaction.user?.id;
+  return typeof id === "string" && id ? id : null;
+}
+
+async function sendDirectMessage(
+  userId: string,
+  content: string,
+  botToken: string,
+): Promise<{ ok: true } | { ok: false; reason: string }> {
+  if (!botToken) {
+    return { ok: false, reason: "missing_bot_token" };
+  }
+
+  try {
+    const channelResponse = await fetch("https://discord.com/api/v10/users/@me/channels", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bot ${botToken}`,
+      },
+      body: JSON.stringify({ recipient_id: userId }),
+    });
+
+    if (!channelResponse.ok) {
+      return { ok: false, reason: `create_channel_${channelResponse.status}` };
+    }
+
+    const channel = (await channelResponse.json()) as { id?: string };
+    if (!channel.id) {
+      return { ok: false, reason: "missing_dm_channel_id" };
+    }
+
+    const messageResponse = await fetch(`https://discord.com/api/v10/channels/${channel.id}/messages`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bot ${botToken}`,
+      },
+      body: JSON.stringify({ content }),
+    });
+
+    if (!messageResponse.ok) {
+      return { ok: false, reason: `send_message_${messageResponse.status}` };
+    }
+
+    return { ok: true };
+  } catch {
+    return { ok: false, reason: "network_error" };
+  }
 }

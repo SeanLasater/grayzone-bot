@@ -1,6 +1,6 @@
 # grayzone-bot
 
-Cloudflare Worker Discord bot with a `/gz-loot` slash command that autocompletes Gray Zone Warfare lootables and replies with size, weight, and sell price.
+Cloudflare Worker Discord bot with a `/gz-loot` slash command that autocompletes Gray Zone Warfare lootables and sends size, weight, and sell price in a direct message.
 
 ## Requirements
 
@@ -36,10 +36,11 @@ export DISCORD_GUILD_ID="your_test_guild_id" # optional, uses global if omitted
 npm run register:commands
 ```
 
-5. Configure worker secret for request verification:
+5. Configure worker secrets for request verification and DM delivery:
 
 ```bash
 wrangler secret put DISCORD_PUBLIC_KEY
+wrangler secret put DISCORD_BOT_TOKEN
 ```
 
 6. Run locally:
@@ -61,4 +62,4 @@ Set your Discord Interactions Endpoint URL to your worker URL, for example:
 - Local tunnel/dev URL while testing
 - `https://grayzone-bot.<your-subdomain>.workers.dev` in production
 
-The bot verifies every incoming interaction with `DISCORD_PUBLIC_KEY` and always replies ephemerally for `/gz-loot`.
+The bot verifies every incoming interaction with `DISCORD_PUBLIC_KEY`, sends `/gz-loot` results via DM, and uses an ephemeral acknowledgement in the channel.

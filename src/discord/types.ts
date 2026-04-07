@@ -16,6 +16,14 @@ export const MessageFlags = {
 
 export type DiscordInteraction = {
   type: number;
+  user?: {
+    id?: string;
+  };
+  member?: {
+    user?: {
+      id?: string;
+    };
+  };
   data?: {
     name?: string;
     options?: Array<{
